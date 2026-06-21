@@ -76,7 +76,7 @@ router.post("/bookings", async (req, res): Promise<void> => {
   console.log(`[Overlap Audit] Found overlaps: ${overlapCount}`);
   
   if (overlapCount > 0) {
-    overlappingBookings.forEach(b => {
+    overlappingBookings.forEach((b: any) => {
       console.log(`  - Existing Booking ID ${b.id}: ${b.startTime.toLocaleString()} - ${b.endTime.toLocaleString()}`);
     });
   }

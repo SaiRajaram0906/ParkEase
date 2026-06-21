@@ -211,8 +211,8 @@ export default function SpotDetail() {
             </div>
             <div className="rounded-xl overflow-hidden border-2 border-muted shadow-inner h-[300px]">
               <SpotMap 
-                lat={parseFloat(spot.latitude)} 
-                lng={parseFloat(spot.longitude)} 
+                lat={spot.latitude ? parseFloat(spot.latitude) : NaN} 
+                lng={spot.longitude ? parseFloat(spot.longitude) : NaN} 
                 address={`${spot.address}, ${spot.city}, ${spot.state}`}
               />
             </div>

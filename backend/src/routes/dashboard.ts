@@ -77,7 +77,7 @@ router.get("/dashboard/city-breakdown", async (_req, res): Promise<void> => {
     .orderBy(desc(count(bookingsTable.id)));
 
   res.json(
-    cityData.map((row) => ({
+    cityData.map((row: any) => ({
       city: row.city,
       bookingCount: Number(row.bookingCount),
       revenue: row.revenue ?? "0",

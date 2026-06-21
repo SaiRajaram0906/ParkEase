@@ -94,7 +94,7 @@ export default function Dashboard() {
               </div>
             ) : (
               <div className="space-y-6">
-                {topSpots?.slice(0, 5).map((spot, i) => (
+                {topSpots?.slice(0, 5).map((spot: any, i) => (
                   <div key={spot.id} className="flex items-center gap-4">
                     <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary shrink-0">
                       #{i + 1}

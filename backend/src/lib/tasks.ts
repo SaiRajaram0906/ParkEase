@@ -27,7 +27,7 @@ export async function updateBookingStatuses() {
 
     for (const booking of expiredBookings) {
       try {
-        await db.transaction(async (tx) => {
+        await db.transaction(async (tx: any) => {
           // Double check the status hasn't changed in the meantime
           const [current] = await tx
             .select()
